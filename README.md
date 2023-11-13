@@ -1,17 +1,24 @@
 
-En el siguiente repositorio buscaremos aplicar Redes Neuronales al análisis y detección de diabetes. 
+# Redes Neuronales para la Detección de Diabetes
+## Introducción
+En este repositorio, exploraremos la aplicación de Redes Neuronales para el análisis y detección de diabetes utilizando el Diabetes Health Indicators Dataset. Las redes neuronales simples se utilizarán como clasificadores para determinar la presencia o ausencia de diabetes o prediabetes en función de los datos recopilados a través de la encuesta Behavioral Risk Factor Surveillance System (BRFSS), una encuesta telefónica anual realizada por los Centros para el Control y la Prevención de Enfermedades (CDC).
 
-El dataset utilizado es el Diabetes Health Indicators Dataset proveniente de la encuesta Behavioral Risk Factor Surveillance System (BRFSS). La misma es una encuesta telefonica recolectada anualmente por la CDC donde a partir de una combinación de datos se busca detectar la presencia o no de diabetes o prediabetes.   
+## Dataset
+El dataset utilizado proviene de Kaggle y se compone del Diabetes Health Indicators Dataset obtenido de la BRFSS. Este conjunto de datos contiene información recopilada a través de la encuesta telefónica, donde se busca identificar la presencia de diabetes o prediabetes mediante una combinación de factores de salud.
 
-El repositorio trae tres datasets, en este caso utilizaremos el 2 y el 3 que poseen la misma información solo que el 2 posee 70692 datos con balanceo y el 3 posee 253680 datos pero desbalanceados. El 1 decidimos no utilizarlo ya que tiene 3 clases en la variable target Diabetes_012  (diabetes, prediabetes o no_diabetes) mientras que los otros dos poseen ambos 2 clases en la variable target Diabetes_binary  (diabetes/prediabetes y no_ diabetes). 
+El repositorio incluye tres conjuntos de datos. En este trabajo, nos enfocaremos en los conjuntos de datos 2 y 3. El conjunto de datos 2 consta de 70,692 datos con un equilibrio entre las clases, mientras que el conjunto de datos 3 contiene 253,680 datos pero presenta desbalanceo en las clases. Optamos por no utilizar el conjunto de datos 1 debido a la presencia de tres clases en la variable objetivo (diabetes, prediabetes o no diabetes), a diferencia de los otros dos conjuntos que tienen dos clases (diabetes/prediabetes y no diabetes).
 
-Decidimos utilizar los dos a fin de evaluar el comportamiento de la red con un dataset balanceado vs uno desbalancedo
+La elección de utilizar ambos conjuntos de datos nos permite evaluar el rendimiento de la red neuronal en un escenario balanceado y desbalanceado.
 
-Para realizar el análisis exploratorio de datos (EDA) utilizamos SweetViz...
+## Trabajo Realizado
+Para realizar el análisis exploratorio de datos (EDA), empleamos SweetViz, una herramienta que proporciona visualizaciones detalladas y estadísticas descriptivas para comprender mejor la distribución y las relaciones en el conjunto de datos.
 
+Como redes probamos la utilización de las dos librerías más comunes TensorFlow y Pytorch. En el modelo construido con TensorFlow utilizamos una arquitectura de dos capas ocultas con 4 y 2 neuronas y una función de activación ReLu. Como función de loss se utilizamos binary_crossentropy.
+Con Pytorch probamos la construcción de dos modelos. El primero con dos capas ocultas de 4 y 8 neuronas con función de activación ReLu, una capa de clasificación con una sola neurona y función Sigmoid. Como función de pérdida Entropy Loss Binaria Cruzada. El segundo modelo fue de dos capas ocultas con 8 y 4 neuronas, con función de activación ReLu, una capa de clasificación con dos neuronas. La función de pérdida Cross Entropy Loss. 
 
-Repositorio de práctica de Introducción al Deep Learning. 
+## Estructura del Repositorio
+El repositorio está organizado como un proyecto de práctica de Introducción al Deep Learning. Puedes encontrar los conjuntos de datos, el código fuente y otros recursos relacionados en las carpetas correspondientes.
 
-Dataset Kaggle. 
+## Enlaces
 
-https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset/
+[Dataset Kaggle](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset/)
